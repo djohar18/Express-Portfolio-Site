@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+  res.render('home', { title: 'Home' });
 });
 
 /* GET about page. */
@@ -12,8 +12,8 @@ router.get('/about', function(req, res, next) {
 });
 
 /* GET mision statement page. */
-router.get('/mission', function(req, res, next) {
-  res.render('index', { title: 'Mission Statement' });
+router.get('/services', function(req, res, next) {
+  res.render('index', { title: 'Services' });
 });
 
 /* GET projects page. */
