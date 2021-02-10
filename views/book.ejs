@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
+        <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+      </head>
+<body>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Published</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <% for(var i=0; i < BookList.length; i++) { %>
+            <tr>
+                <td><%= BookList[i].name %></td>
+                <td><%= BookList[i].author %></td>
+                <td><%= BookList[i].published %></td>
+                <td><%= BookList[i].description %></td> 
+                <td><%= BookList[i].price %></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+<footer class="footer mt-auto py-0 bg-secondary bg-dark fixed-bottom">
+    <div class="container">
+      <span class="text-white">&copy;Express Portfolio Site</span>
+    </div>
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  </footer>
+</html>

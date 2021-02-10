@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-let app = require('./app');
+let app = require('./config/app');
 let debug = require('debug')('projectrepo:server');
 let http = require('http');
 
