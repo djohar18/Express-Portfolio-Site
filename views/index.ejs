@@ -7,14 +7,12 @@
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
   </head>
-  <body class="d-flex flex-column h-100 ">
+  <body class="d-flex flex-column h-1000" style="background-color: slategray" >
     <header>      
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000; padding-top: unset; padding-bottom: unset;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          <div class="bd-brand-item w-100 p-0">
-          <img src="images/my-logo.png" alt="Bootstrap" width="70" height="70" loading="lazy">
-        </div>
+        <a class="navbar-brand bd-brand-item w-100 p-0" href="/">
+          <img src="images/my-logo.png" alt="Bootstrap" width="85" height="85" loading="lazy">
       </a>
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarColor01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -62,21 +60,22 @@
     <main class="flex-shrink-0">
       <div class="container">
         <div class="row mb-4">
-            <% if(title == "About") { %> 
-              <%- include partials/about %>
-            <%} else if(title == "Services") { %> 
-              <%- include partials/services %>
-            <%} else if(title == "Projects") { %> 
-              <%- include partials/projects %>
-            <%} else if(title == "Contact") { %> 
-              <%- include partials/contact %>
-            <% } %>
-            
-    </div>
+          <% if(title == "Home") { %> 
+            <%- include partials/home %>
+          <%} else if(title == "About") { %> 
+            <%- include partials/about %>
+          <%} else if(title == "Services") { %> 
+            <%- include partials/services %>
+          <%} else if(title == "Projects") { %> 
+            <%- include partials/projects %>
+          <%} else if(title == "Contact") { %> 
+            <%- include partials/contact %>
+          <% } %>            
+        </div>
     </main>   
   </body>
 
-  <footer class="footer mt-auto py-0 bg-secondary bg-dark fixed-bottom">
+  <footer class="footer mt-auto py-0 bg-secondary fixed-bottom" style="background-color: darkslategrey">
     <div class="container">
       <span class="text-white">&copy;Express Portfolio Site</span>
     </div>

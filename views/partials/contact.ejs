@@ -1,6 +1,33 @@
-<h1 class="mt-5">Contact</h1>
-<p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.
-     A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the 
-     <code class="small">main &gt; .container</code>.</p>
-<p>Back to <a href="/docs/5.0/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+<h1 class="mt-5 text-white">Contact</h1>
+   <!--Form -->
+   <div class="col-md-12">
+   <div class="form-field text-white" >
+     <h3>Fill this Form</h3>   
+     <form style="text-align: start;" id="form" action="/contact" method="POST">
+       <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">First Name</label>
+          <input type="text" class="form-control" value="" name="firstName" id="exampleFormControlInput1" placeholder="Enter your FirstName">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+          <input type="text" class="form-control" value="" name="lastName" id="exampleFormControlInput1" placeholder="Enter your LastName">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" value="" name="email" id="exampleFormControlInput1" placeholder="Enter your name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Mobile No</label>
+          <input type="number" class="form-control" value="" name="mobile" id="exampleFormControlInput1" placeholder="Enter your mobile number with country-code">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <textarea class="form-control" value="" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3 mt-5" style="display: flex;justify-content: center;">
+          <button type="submit" class="btn text-dark btn-lg btn-block bg-white">Submit</button>
+        </div>
+      </form>
+  </div>
+</div>
         
