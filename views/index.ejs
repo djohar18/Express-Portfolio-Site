@@ -7,11 +7,11 @@
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
   </head>
-  <body class="d-flex flex-column h-1000" style="background-color: slategray" >
+  <body class="d-flex flex-column h-1000 mb-5" style="background-color: rgba(17, 24, 39);" >
     <header>      
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000; padding-top: unset; padding-bottom: unset;">
       <div class="container-fluid">
-        <a class="navbar-brand bd-brand-item w-100 p-0" href="/">
+        <a class="navbar-brand bd-brand-item p-0" href="/">
           <img src="images/my-logo.png" alt="Bootstrap" width="85" height="85" loading="lazy">
       </a>
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarColor01">
@@ -58,8 +58,8 @@
     </header>
     
     <main class="flex-shrink-0">
-      <div class="container">
-        <div class="row mb-4">
+      <div class="container mt-4 mb-2" style="box-shadow: 1px 1px 5px 3px rgb(41 55 74); background-color: rgb(35 45 66);">
+        <div class="row" style="height: 100%;" >
           <% if(title == "Home") { %> 
             <%- include partials/home %>
           <%} else if(title == "About") { %> 
@@ -75,7 +75,7 @@
     </main>   
   </body>
 
-  <footer class="footer mt-auto py-0 bg-secondary fixed-bottom" style="background-color: darkslategrey">
+  <footer class="footer mt-auto py-2 fixed-bottom" style="background-color: rgba(17, 24, 39);">
     <div class="container">
       <span class="text-white">&copy;Express Portfolio Site</span>
     </div>
