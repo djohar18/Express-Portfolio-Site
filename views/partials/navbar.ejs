@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000; padding-top: unset; padding-bottom: unset;">
+    <div class="container-fluid">
+      <a class="navbar-brand bd-brand-item p-0" href="/">
+        <img src="images/my-logo.png" alt="..." width="85" height="85" loading="lazy">
+    </a>
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarColor01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <% if(title == 'Home'){ %> 
+            <li class="nav-item active">
+          <% } else { %> 
+              <li class="nav-item">
+          <% } %> 
+            <a class="nav-link navbar-brand" aria-current="page" href="/"><i class="fas fa-h-square"></i> Home</a>
+          </li>
+          <% if(title == 'About'){ %> 
+            <li class="nav-item active">
+          <% } else { %> 
+              <li class="nav-item">
+          <% } %> 
+            <a class="nav-link navbar-brand" href="/about"><i class="fas fa-question-circle"></i> About</a>
+          </li>
+          <% if(title == 'Services'){ %> 
+            <li class="nav-item active">
+          <% } else { %> 
+              <li class="nav-item">
+          <% } %> 
+            <a class="nav-link navbar-brand" href="/services"><i class="fas fa-user-shield"></i> Services</a>
+          </li>
+          <% if(title == 'Projects'){ %> 
+            <li class="nav-item active">
+          <% } else { %> 
+              <li class="nav-item">
+          <% } %>
+            <a class="nav-link navbar-brand" href="/projects"><i class="fas fa-project-diagram"></i> Projects</a>
+          </li>
+          <% if(title == 'Contact'){ %> 
+            <li class="nav-item active">
+          <% } else { %> 
+              <li class="nav-item">
+          <% } %>
+            <a class="nav-link navbar-brand" href="/contact"><i class="fas fa-id-card"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
