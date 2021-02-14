@@ -1,27 +1,35 @@
+<!-- Main page html view -->
 <!DOCTYPE html>
 <html>
+  <!-- include head -->
   <%- include partials/head %>   
   
-  <body class="d-flex flex-column h-1000 mb-5" style="background-color: rgba(17, 24, 39);" >
-    <header>      
+  <body class="d-flex flex-column h-1000 mb-5 body-style" >
+    <header> 
+      <!-- include navbar -->
       <%- include partials/navbar %>
     </header>
       <main class="flex-shrink-0">
-        <div class="container mt-4 mb-2" style="box-shadow: 1px 1px 5px 3px rgb(41 55 74); background-color: rgb(35 45 66);">
+        <div class="container mt-4 mb-2 container-style">
           <div class="row" style="height: 100%;" >
             <% if(title == "Home") { %> 
+              <!-- include partial home page -->
               <%- include partials/home %>
-            <%} else if(title == "About") { %> 
+              <%} else if(title == "About") { %> 
+                <!-- include partial about page -->
               <%- include partials/about %>
             <%} else if(title == "Services") { %> 
+              <!-- include partial services page -->
               <%- include partials/services %>
-            <%} else if(title == "Projects") { %> 
+            <%} else if(title == "Projects") { %>
+              <!-- include partial projects page --> 
               <%- include partials/projects %>
             <% } %>            
           </div>
       </main>   
   </body>
-  <footer class="footer mt-auto py-2 fixed-bottom" style="background-color: rgba(17, 24, 39);">
+  <footer class="footer mt-auto py-2 fixed-bottom footer-bg">
+    <!-- include footer -->
     <%- include partials/footer %>
   </footer>
 </html>

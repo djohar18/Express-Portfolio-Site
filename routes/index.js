@@ -25,4 +25,11 @@ router.get('/projects', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
 });
+
+//POST Request on form submit from contact page
+router.post("/home", (req, res, next) => {
+  console.log("entered");
+  console.log(req.body);
+  res.redirect("/");
+});
 module.exports = router;

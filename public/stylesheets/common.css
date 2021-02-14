@@ -1,0 +1,49 @@
+/* Dedicated css for this website */
+
+/* css for form */
+.form-field{
+  color: white;
+  box-shadow: 1px 1px 5px 3px rgb(41 55 74); 
+  background-color: rgb(33 32 32);
+  padding: 1rem;
+}
+
+/* css for container background */
+.container-style{
+  box-shadow: 1px 1px 5px 3px rgb(41 55 74); 
+  background-color: rgb(35 45 66);
+  padding: 1rem;
+}
+
+/* css for body background */
+.body-style{
+  background-color: rgba(17, 24, 39);
+}
+
+/* css for footer background */
+.footer-bg{
+  background-color: rgba(17, 24, 39);
+}
+
+/* Removes arrows and spinners */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* font style for h1 */
+h1{
+  font-family: Lucida Handwriting;
+}
+
+/* font style for p tag */
+p{
+  font-family: CursiveBrush Script MT;
+}
