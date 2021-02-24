@@ -1,35 +1,27 @@
-let express = require('express');
-const passport = require('passport');
+let express = require("express");
 let router = express.Router();
+let passport = require("passport");
+let { ensureAuthenticated } = require("../config/authentication");
 
-router.get('/', (req, res, next) => {
-    if(!req.user)
-    {
-        res.render('authentication/login', {title : 'Login Page'});
-    }
-    else{
-        return response.redirect('/');
-    }
+//login GET request
+router.get("/", (req, res, next) => {
+    res.render('login', {title: 'Login Page'})
+})
+
+// Login post handle
+router.post("/", (req, res, next) => {
+  passport.authenticate("local", {
+    successRedirect: "/contact-list",
+    failureRedirect: "/login",
+    // failureFlash: true,
+  })(req, res, next);
 });
 
-router.post('/', (req, res, next) => {
-    passport.authenticate('local', (err, user, info) => {
-        if(err)
-        {
-            console.log(err);
-            res.end(err)
-        }
-        else if(!user)
-        {
-            req.flash('loginMessage', 'Authentication Error');
-            return res.redirect('/login');
-        }
-        req.login(user, (err) => {
-            if(err)
-            {
-                console.log(err);                
-            }
-            return res.redirect('/contact-list');
-        });
-    });
+// Logout
+router.get("/logout", (req, res) => {
+  req.logout();
+  req.session.destroy();
+  res.redirect("/login");
 });
+
+module.exports = router;

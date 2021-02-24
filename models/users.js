@@ -13,16 +13,6 @@ let user = mongoose.Schema({
         default: '',
         trim: true,
         required: 'password is required'
-    },
-    created:
-    {
-        type: Date,
-        default: Date.now
-    },
-    updated:
-    {
-        type: Date,
-        default: Date.now
     }
 },
 {
@@ -33,4 +23,4 @@ let user = mongoose.Schema({
 let options = ({missingPasswordError: 'Wrong/missing password'});
 user.plugin(passportLocalMongoose, options);
 
-module.exports.user = mongoose.model('user', user);
+module.exports = mongoose.model('User', user);

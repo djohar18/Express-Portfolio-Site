@@ -14,16 +14,25 @@
           <div class="row" style="height: 100%;" >
             <% if(title == "Home") { %> 
               <!-- include partial home page -->
-              <%- include partials/home %>
+                <%- include partials/home %>
               <%} else if(title == "About") { %> 
                 <!-- include partial about page -->
-              <%- include partials/about %>
-            <%} else if(title == "Services") { %> 
-              <!-- include partial services page -->
-              <%- include partials/services %>
-            <%} else if(title == "Projects") { %>
+                <%- include partials/about %>
+              <%} else if(title == "Services") { %> 
+                <!-- include partial services page -->
+                <%- include partials/services %>
+              <%} else if(title == "Projects") { %>
               <!-- include partial projects page --> 
-              <%- include partials/projects %>
+                <%- include partials/projects %>
+              <%} else if(title == "Business Contact List") { %>
+                <!-- include partial projects page --> 
+                <%- include partials/contact_list %>
+              <%} else if(title == "Add New Contact") { %>
+                <!-- include partial add_contact page --> 
+                <%- include partials/add_contact %>
+              <%} else if(title == "Update Contact") { %>
+                <!-- include partial update_contact page --> 
+                <%- include partials/update_contact %>
             <% } %>            
           </div>
       </main>   
