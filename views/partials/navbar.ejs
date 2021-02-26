@@ -40,7 +40,22 @@
             <li class="nav-item">
         <% } %>
           <a class="nav-link navbar-brand" href="/contact"><i class="fas fa-id-card"></i> Contact</a>
+        </li>        
+        <% if(title == 'Business Contact List'){ %> 
+          <li class="nav-item active">
+        <% } else { %> 
+            <li class="nav-item">
+        <% } %>
+          <a class="nav-link navbar-brand" href="/contact-list"><i class="fas fa-clipboard-list"></i></i> Business Contacts</a>
+        </li>  
+        <li class="nav-item active">
+          <a class="nav-link navbar-brand btn btn-success" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
         </li>
+        <% if(isAuthenticated){%>}
+          <li class="nav-item active">
+            <a class="nav-link navbar-brand btn btn-warning" href="/login/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+          </li>
+        <%}%>
       </ul>
     </div>
   </div>

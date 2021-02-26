@@ -1,7 +1,7 @@
 let express = require("express");
 let router = express.Router();
 let passport = require("passport");
-let { ensureAuthenticated } = require("../config/authentication");
+let { checkAuthentication } = require("../config/authentication");
 
 //login GET request
 router.get("/", (req, res, next) => {

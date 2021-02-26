@@ -1,12 +1,12 @@
 let express = require('express');
 let router = express.Router();
-const { ensureAuthenticated } = require("../config/authentication");
+let { checkAuthentication } = require("../config/authentication");
 
 //connect to out Book model
 let Contact = require('../models/contactlist');
 
 //Get route for Book List page -- read option
-router.get('/', ensureAuthenticated, (req, res, next) => {
+router.get('/', checkAuthentication, (req, res, next) => {
     Contact.find((err, ContactList) => {
     if(err)
     {
@@ -22,12 +22,12 @@ router.get('/', ensureAuthenticated, (req, res, next) => {
 
 
 // GET Route for displaying the Add page - Create Operation
-router.get('/add', ensureAuthenticated, (req, res, next) => {
+router.get('/add', checkAuthentication, (req, res, next) => {
     res.render('index', {title: 'Add New Contact'});
 });
 
 // POST Route for processing the Add page - Create Operation
-router.post('/add', ensureAuthenticated, (req, res, next) => {
+router.post('/add', checkAuthentication, (req, res, next) => {
     let newContact = Contact({
         "name": req.body.name,
         "contact_number": req.body.contact,
@@ -47,7 +47,7 @@ router.post('/add', ensureAuthenticated, (req, res, next) => {
 });
 
 // GET Route for displaying the Edit page - Update Operation
-router.get('/update/:id', ensureAuthenticated, (req, res, next) => {
+router.get('/update/:id', checkAuthentication, (req, res, next) => {
     let id = req.params.id;
 
     Contact.findById(id, (err, contactToUpdate) => {
@@ -64,7 +64,7 @@ router.get('/update/:id', ensureAuthenticated, (req, res, next) => {
 });
 
 // POST Route for processing the Add page - Create Operation
-router.post('/update/:id', ensureAuthenticated, (req, res, next) => {
+router.post('/update/:id', checkAuthentication, (req, res, next) => {
     let id = req.params.id;
 
     let updatedContact = Contact({
@@ -87,7 +87,7 @@ router.post('/update/:id', ensureAuthenticated, (req, res, next) => {
 });
 
 //GET request for deletion - Delete Operation
-router.get('/delete/:id', ensureAuthenticated, (req, res, next) => {
+router.get('/delete/:id', checkAuthentication, (req, res, next) => {
     let id = req.params.id;
     Contact.remove({_id:id}, (err) => {
         if(err)
