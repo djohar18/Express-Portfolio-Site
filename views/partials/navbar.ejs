@@ -47,11 +47,12 @@
             <li class="nav-item">
         <% } %>
           <a class="nav-link navbar-brand" href="/contact-list"><i class="fas fa-clipboard-list"></i></i> Business Contacts</a>
-        </li>  
+        </li> 
+        <% if(!isAuthenticated){%>
         <li class="nav-item active">
           <a class="nav-link navbar-brand btn btn-success" href="/login"><i class="fas fa-sign-in-alt"></i> Login</a>
         </li>
-        <% if(isAuthenticated){%>}
+        <%} else { %>
           <li class="nav-item active">
             <a class="nav-link navbar-brand btn btn-warning" href="/login/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
           </li>

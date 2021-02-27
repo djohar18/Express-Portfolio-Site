@@ -1,3 +1,10 @@
+/*
+  File Name: authentication.js
+  Student Name : Divyanshu Johar
+  Student ID : 301149021
+  Date : February 28, 2021
+*/
+
 let express = require("express");
 let router = express.Router();
 let passport = require("passport");

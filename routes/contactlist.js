@@ -1,3 +1,10 @@
+/*
+  File Name: contactlist.js
+  Student Name : Divyanshu Johar
+  Student ID : 301149021
+  Date : February 28, 2021
+*/
+
 let express = require('express');
 let router = express.Router();
 let { checkAuthentication } = require("../config/authentication");
@@ -7,7 +14,9 @@ let Contact = require('../models/contactlist');
 
 //Get route for Book List page -- read option
 router.get('/', checkAuthentication, (req, res, next) => {
-    Contact.find((err, ContactList) => {
+    Contact.find({})
+    .sort("name")
+    .exec(function (err, ContactList) {
     if(err)
     {
         return console.error(err);

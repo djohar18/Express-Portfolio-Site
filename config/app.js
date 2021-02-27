@@ -2,7 +2,7 @@
   File Name: app.js
   Student Name : Divyanshu Johar
   Student ID : 301149021
-  Date : February 14, 2021
+  Date : February 28, 2021
 */
 
 /* Module Dependencies */
@@ -46,12 +46,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
-//check authentication
-app.use(function (req, res, next) {
-  res.locals.isAuthenticated = req.isAuthenticated();
-  next();
-});
-
 //authentication setup
 app.use(session({
   secret : "secretKey",
@@ -65,6 +59,14 @@ app.use(flash());
 //initializepassport
 app.use(passport.initialize());
 app.use(passport.session());
+
+//check authentication
+app.use(function (req, res, next) {
+  res.locals.isAuthenticated = req.isAuthenticated();
+  next();
+  console.log('Method : ', req.isAuthenticated());
+});
+
 
 //route for index.js
 let indexRouter = require('../routes/index');
