@@ -9,7 +9,7 @@ let express = require('express');
 let router = express.Router();
 let { checkAuthentication } = require("../config/authentication");
 
-//connect to out Book model
+//connect to out contactlist model
 let Contact = require('../models/contactlist');
 
 //Get route for Book List page -- read option
